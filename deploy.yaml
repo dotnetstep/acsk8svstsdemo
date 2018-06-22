@@ -23,7 +23,11 @@ metadata:
 spec:
   strategy:
     type: Recreate
-  replicas: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      name: service-b
+      app: demo
   template:
     metadata:
       labels:
